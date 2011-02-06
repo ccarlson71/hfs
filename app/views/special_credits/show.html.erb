@@ -1,0 +1,28 @@
+<% title "Special Credit" %>
+
+<p>
+  <strong>Player:</strong>
+  <%= @special_credit.player_id %>
+</p>
+<p>
+  <strong>Player Class:</strong>
+  <%= @special_credit.player_class_id %>
+</p>
+<p>
+  <strong>Credits:</strong>
+  <%= @special_credit.credits %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @special_credit.date %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @special_credit.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_special_credit_path(@special_credit) %> |
+  <%= link_to "Destroy", @special_credit, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", special_credits_path %>
+</p>

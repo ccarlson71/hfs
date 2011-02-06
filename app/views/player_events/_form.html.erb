@@ -1,0 +1,16 @@
+<%= form_for @player_event do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :player_id %><br />
+    <%= f.text_field :player_id %>
+  </p>
+  <p>
+    <%= f.label :event_id %><br />
+    <%= f.text_field :event_id %>
+  </p>
+  <p>
+    <%= f.label :player_class_id %><br />
+    <%= f.text_field :player_class_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

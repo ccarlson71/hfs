@@ -1,0 +1,20 @@
+<%= form_for @event do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :event_date %><br />
+    <%= f.date_select :event_date %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :credits %><br />
+    <%= f.text_field :credits %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

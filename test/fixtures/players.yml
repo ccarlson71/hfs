@@ -1,0 +1,9 @@
+one:
+  name: MyString
+  dues_paid: false
+  dues_paid_through: 2011-02-05
+
+two:
+  name: MyString
+  dues_paid: false
+  dues_paid_through: 2011-02-05

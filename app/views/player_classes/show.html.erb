@@ -1,0 +1,12 @@
+<% title "Player Class" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @player_class.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_player_class_path(@player_class) %> |
+  <%= link_to "Destroy", @player_class, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", player_classes_path %>
+</p>

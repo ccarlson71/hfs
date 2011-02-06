@@ -1,0 +1,24 @@
+<%= form_for @special_credit do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :player_id %><br />
+    <%= f.text_field :player_id %>
+  </p>
+  <p>
+    <%= f.label :player_class_id %><br />
+    <%= f.text_field :player_class_id %>
+  </p>
+  <p>
+    <%= f.label :credits %><br />
+    <%= f.text_field :credits %>
+  </p>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

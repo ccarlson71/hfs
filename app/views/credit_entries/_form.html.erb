@@ -1,0 +1,24 @@
+<%= form_for @credit_entry do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :player_class_id %><br />
+    <%= f.text_field :player_class_id %>
+  </p>
+  <p>
+    <%= f.label :player_id %><br />
+    <%= f.text_field :player_id %>
+  </p>
+  <p>
+    <%= f.label :total_credits %><br />
+    <%= f.text_field :total_credits %>
+  </p>
+  <p>
+    <%= f.label :initial_credits %><br />
+    <%= f.text_field :initial_credits %>
+  </p>
+  <p>
+    <%= f.label :joined_on %><br />
+    <%= f.date_select :joined_on %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

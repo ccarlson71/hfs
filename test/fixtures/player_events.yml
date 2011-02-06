@@ -1,0 +1,9 @@
+one:
+  player_id: 1
+  event_id: 1
+  player_class_id: 1
+
+two:
+  player_id: 1
+  event_id: 1
+  player_class_id: 1

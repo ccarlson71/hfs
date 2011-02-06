@@ -1,0 +1,20 @@
+<% title "Player" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @player.name %>
+</p>
+<p>
+  <strong>Dues Paid:</strong>
+  <%= @player.dues_paid %>
+</p>
+<p>
+  <strong>Dues Paid Through:</strong>
+  <%= @player.dues_paid_through %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_player_path(@player) %> |
+  <%= link_to "Destroy", @player, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", players_path %>
+</p>

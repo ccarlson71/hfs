@@ -1,0 +1,21 @@
+<% title "Player Events" %>
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Event</th>
+    <th>Player Class</th>
+  </tr>
+  <% for player_event in @player_events %>
+    <tr>
+      <td><%= player_event.player_id %></td>
+      <td><%= player_event.event_id %></td>
+      <td><%= player_event.player_class_id %></td>
+      <td><%= link_to "Show", player_event %></td>
+      <td><%= link_to "Edit", edit_player_event_path(player_event) %></td>
+      <td><%= link_to "Destroy", player_event, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Player Event", new_player_event_path(player_event) %></p>

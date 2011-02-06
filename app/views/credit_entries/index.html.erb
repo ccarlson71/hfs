@@ -1,0 +1,25 @@
+<% title "Credit Entries" %>
+
+<table>
+  <tr>
+    <th>Player Class</th>
+    <th>Player</th>
+    <th>Total Credits</th>
+    <th>Initial Credits</th>
+    <th>Joined On</th>
+  </tr>
+  <% for credit_entry in @credit_entries %>
+    <tr>
+      <td><%= credit_entry.player_class_id %></td>
+      <td><%= credit_entry.player_id %></td>
+      <td><%= credit_entry.total_credits %></td>
+      <td><%= credit_entry.initial_credits %></td>
+      <td><%= credit_entry.joined_on %></td>
+      <td><%= link_to "Show", credit_entry %></td>
+      <td><%= link_to "Edit", edit_credit_entry_path(credit_entry) %></td>
+      <td><%= link_to "Destroy", credit_entry, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Credit Entry", new_credit_entry_path(credit_entry) %></p>

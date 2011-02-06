@@ -1,0 +1,13 @@
+one:
+  player_class_id: 1
+  player_id: 1
+  total_credits: 1
+  initial_credits: 1
+  joined_on: 2011-02-05
+
+two:
+  player_class_id: 1
+  player_id: 1
+  total_credits: 1
+  initial_credits: 1
+  joined_on: 2011-02-05

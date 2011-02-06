@@ -1,0 +1,25 @@
+<% title "Special Credits" %>
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Player Class</th>
+    <th>Credits</th>
+    <th>Date</th>
+    <th>Description</th>
+  </tr>
+  <% for special_credit in @special_credits %>
+    <tr>
+      <td><%= special_credit.player_id %></td>
+      <td><%= special_credit.player_class_id %></td>
+      <td><%= special_credit.credits %></td>
+      <td><%= special_credit.date %></td>
+      <td><%= special_credit.description %></td>
+      <td><%= link_to "Show", special_credit %></td>
+      <td><%= link_to "Edit", edit_special_credit_path(special_credit) %></td>
+      <td><%= link_to "Destroy", special_credit, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Special Credit", new_special_credit_path(special_credit) %></p>

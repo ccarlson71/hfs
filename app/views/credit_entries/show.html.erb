@@ -1,0 +1,28 @@
+<% title "Credit Entry" %>
+
+<p>
+  <strong>Player Class:</strong>
+  <%= @credit_entry.player_class_id %>
+</p>
+<p>
+  <strong>Player:</strong>
+  <%= @credit_entry.player_id %>
+</p>
+<p>
+  <strong>Total Credits:</strong>
+  <%= @credit_entry.total_credits %>
+</p>
+<p>
+  <strong>Initial Credits:</strong>
+  <%= @credit_entry.initial_credits %>
+</p>
+<p>
+  <strong>Joined On:</strong>
+  <%= @credit_entry.joined_on %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_credit_entry_path(@credit_entry) %> |
+  <%= link_to "Destroy", @credit_entry, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", credit_entries_path %>
+</p>

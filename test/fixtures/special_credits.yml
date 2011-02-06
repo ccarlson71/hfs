@@ -1,0 +1,13 @@
+one:
+  player_id: 1
+  player_class_id: 1
+  credits: 1
+  date: 2011-02-05
+  description: MyString
+
+two:
+  player_id: 1
+  player_class_id: 1
+  credits: 1
+  date: 2011-02-05
+  description: MyString

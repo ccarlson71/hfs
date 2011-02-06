@@ -1,0 +1,2 @@
+module CreditEntriesHelper
+end
