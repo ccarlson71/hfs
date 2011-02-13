@@ -20,7 +20,13 @@ player_classes = PlayerClass.create([
   { :name => 'Warrior' },
   { :name => 'Wizard' },
   { :name => 'Infernal Champion' },
-  { :name => 'Samurai' }
+  { :name => 'Samurai' },
+  { :name => 'Alchemist' },
+  { :name => 'Monster' },
+  { :name => 'Color' },
+  { :name => 'Wench' },
+  { :name => 'Blacksmith' },
+  { :name => 'Reeve' }
   ])
   
 Player.delete_all
