@@ -1,0 +1,36 @@
+#Persona name|Class_1:Credits,Class_2:Credits,...
+Ivaar d'Besu|Wizard:60,Warrior:48
+Larissa Strome
+Sleet Gil-Shalos
+Cirrus de Vorschak
+Kyrryn Stonewall
+Barda Dragonsbane
+Camillius
+Crianna
+Dewey the Crow
+Doniban Bane
+Ellm
+Father Joey
+Fenris
+Halinoph Hakunahmattata
+Inga of Bos Taurus
+Jay Ulrath
+Kid
+Kotojyn
+Leena Littlesparkle
+Loin of Bos Taurus
+Madalena
+Nexus Valhees
+Og MacDonald
+Orin
+Rowan Fife
+Schleck Dabid
+Sebastian Hawkemoon
+Shade
+Shivanni MacDonald
+Sovereth
+Spik Spizzleballs
+Tefyable
+Vash Ironwolf
+Viliabos
+Xanyin Tetsu
