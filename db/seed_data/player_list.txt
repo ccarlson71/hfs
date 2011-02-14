@@ -1,4 +1,5 @@
 #Persona name|Class_1:Credits,Class_2:Credits,...
+#STARTDATE:2011/01/01
 Ivaar d'Besu
 Larissa Strome
 Sleet Gil-Shalos|Assassin:17,Healer:100,Warrior:37,Wizard:75,Alchemist:41,Monster:60

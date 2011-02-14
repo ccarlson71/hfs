@@ -32,8 +32,15 @@ player_classes = PlayerClass.create([
 Player.delete_all
 CreditEntry.delete_all
 
+start_date = Date.civil(2001,01,01)
+
 open("db/seed_data/player_list.txt") do |players|
   players.read.each_line do |player|
+    if player[0..9] == "#STARTDATE"
+      dateparams = player.split(":")[1].split("/").map { |x| x.to_i }
+      start_date = Date.civil(dateparams[0],dateparams[1],dateparams[2])
+      puts "New Start Date: #{start_date.to_s}"
+    end
     next if player[0..0] == "#"
     player_name,class_list = player.chomp.split("|")
     puts "New player: #{player_name}"
@@ -44,8 +51,9 @@ open("db/seed_data/player_list.txt") do |players|
         puts "  -- #{class_name}: #{credits}"
         new_credit_entry = CreditEntry.create!(
           :player_class_id => PlayerClass.find_by_name(class_name).id,
-          :total_credits => credits,
-          :initial_credits => credits)
+          :total_credits => 0,
+          :initial_credits => credits,
+          :joined_on => Date.civil(2011,01,01))
         new_player.credit_entries << new_credit_entry
       end
     end

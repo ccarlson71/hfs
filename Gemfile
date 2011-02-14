@@ -34,3 +34,5 @@ gem 'formtastic', '~> 1.1.0'
 #   gem 'webrat'
 # end
 gem "mocha", :group => :test
+
+gem "jquery-rails"
