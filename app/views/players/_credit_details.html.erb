@@ -1,0 +1,26 @@
+<div style="margin: 0 0 0.5em 0; width: 100%; border-bottom: 2px solid black"><strong><%= PlayerClass.find(@player_class).name %></strong>
+<div style="float:right;font-size: 75%">
+<em><%= link_to "close", url_for(:action => "show_details", :clear_details => :true), :remote => :true %></em>
+</div></div>
+Records start <%= @credit_entry.created_at.to_date.to_formatted_s(:abbreviated) %> with <%= @credit_entry.initial_credits %> credits.<br /><br />
+<% if @list.empty? %>
+  No further credits recorded.
+<% else %>
+  <table class="detail_credits" style="font-size: 80%">
+  <tr><th>Date</th><th>Credits</th><th>Note</th></tr>
+  <% for entry in @list %>
+  <tr>
+    <td><%= entry["date"].to_formatted_s(:abbreviated) %></td>
+    <td style="text-align:center"><%= entry["credits"] %></td>
+    <td>
+      <% if entry["event"].nil? %>
+        <%= entry["note"] %>
+      <% else %>
+        <%= link_to entry["note"], entry["event"].event %>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+  </table>
+<% end %>
+

@@ -1,19 +1,33 @@
-<% title "Player" %>
+<% title "Player Detail: #{@player.name}" %>
 
 <p>
-  <strong>Name:</strong>
-  <%= @player.name %>
-</p>
-<p>
-  <strong>Dues Paid:</strong>
-  <%= @player.dues_paid %>
-</p>
-<p>
-  <strong>Dues Paid Through:</strong>
-  <%= @player.dues_paid_through %>
+  <strong>Dues Status: 
+  <% if @player.lifetime_member %>
+    Lifetime Member
+  <% elsif @player.dues_paid? %>
+    Dues paid through <%= @player.dues_paid_through.to_formatted_s(:abbreviated) %>
+  <% else %>
+    Dues not paid
+  <% end %>
+  </strong>
 </p>
 
-<p>
+<table class="playerdetail"><tr>
+<td id="creditsList">
+<% if @credits.empty? %>
+  <h2>No Credits</h2>
+<% else %>
+  <table class="creditlist">
+  <tr><th>Class</th><th>Credits</th><th>Level</th></tr>
+  <% for item in @credits.keys.sort{|x,y| PlayerClass.find(x).name <=> PlayerClass.find(y).name } %>
+  <tr><td><%= link_to PlayerClass.find(item).name, url_for(:action => "show_details", :id => @player, :player_class_id => item), :remote => :true %></td><td><%= @credits[item] %></td><td><%= @credits[item].to_level %></td></tr>
+  <% end %>
+  </table>
+<% end %>
+</td>
+<td id="creditsDetail" style="width:25em;vertical-align:top">
+</td></tr></table>
+<p style="clear:both">
   <%= link_to "Edit", edit_player_path(@player) %> |
   <%= link_to "Destroy", @player, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", players_path %>

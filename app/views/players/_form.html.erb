@@ -1,16 +1,9 @@
-<%= form_for @player do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :dues_paid %><br />
-    <%= f.check_box :dues_paid %>
-  </p>
-  <p>
-    <%= f.label :dues_paid_through %><br />
-    <%= f.date_select :dues_paid_through %>
-  </p>
-  <p><%= f.submit %></p>
+<%= semantic_form_for @player do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :lifetime_member, :onchange => "check_selected_value('lifetime_member');" %>
+    <%= f.input :dues_paid %>
+    <%= f.input :dues_paid_through, :as => :datepicker %>
+  <% end %>
+  <%= f.buttons %>
 <% end %>

@@ -3,3 +3,5 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 db/seed_data/player_list.txt
+hfs.tmproj
+

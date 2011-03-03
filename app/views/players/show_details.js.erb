@@ -1,0 +1,9 @@
+<% if @clear_details %>
+  $("#creditsDetail").fadeOut('fast', function() {$('#creditsDetail').html("")})
+<% else %>
+  $('#creditsDetail').fadeOut('fast', function() {
+          $('#creditsDetail').html("<%= escape_javascript(render(:partial =>'credit_details')) %>").fadeIn('fast');
+  });
+<% end %>
+
+

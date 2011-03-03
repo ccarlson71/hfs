@@ -17,6 +17,17 @@
   <%= @event.location %>
 </p>
 
+<% if not @attendees.nil? %>
+  <table class="attendeelist">
+    <tr><th>Player</th><th>Class Played</th></tr>
+    <% for attendee in @attendees.sort{|x,y| x.player.name <=> y.player.name} %>
+      <tr>
+        <td><%= link_to "#{attendee.player.name}", attendee.player %></td>
+        <td><%= attendee.player_class.name %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
 <p>
   <%= link_to "Edit", edit_event_path(@event) %> |
   <%= link_to "Destroy", @event, :confirm => 'Are you sure?', :method => :delete %> |

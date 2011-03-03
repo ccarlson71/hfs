@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110206020303) do
+ActiveRecord::Schema.define(:version => 20110226035133) do
 
   create_table "credit_entries", :force => true do |t|
     t.integer  "player_class_id"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20110206020303) do
     t.date     "dues_paid_through"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "lifetime_member"
   end
 
   create_table "special_credits", :force => true do |t|

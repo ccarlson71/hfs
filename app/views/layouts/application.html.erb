@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-    <%= stylesheet_link_tag "application",'formtastic','formtastic_changes',:cache => 'base' %>
+    <%= stylesheet_link_tag "application",'formtastic','formtastic_changes','custom',:cache => 'base' %>
     <%= stylesheet_link_tag 'jquery-ui-1.8.9.custom.css' %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>

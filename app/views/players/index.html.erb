@@ -1,19 +1,14 @@
 <% title "Players" %>
 
-<table>
+<table class="playerlist">
   <tr>
     <th>Name</th>
-    <th>Dues Paid</th>
     <th>Dues Paid Through</th>
   </tr>
-  <% for player in @players %>
+  <% for player in @players.sort {|a,b| a.name <=> b.name} %>
     <tr>
-      <td><%= player.name %></td>
-      <td><%= player.dues_paid %></td>
-      <td><%= player.dues_paid_through %></td>
-      <td><%= link_to "Show", player %></td>
-      <td><%= link_to "Edit", edit_player_path(player) %></td>
-      <td><%= link_to "Destroy", player, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to player.name, player %></td>
+      <td><%= player.lifetime_member ? "Lifetime" : (player.dues_paid ? player.dues_paid_through : "-") %></td>
     </tr>
   <% end %>
 </table>

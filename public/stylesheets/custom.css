@@ -1,0 +1,29 @@
+table.creditlist th { border-bottom: 2px solid black; }
+table.creditlist { border-collapse: collapse; }
+table.creditlist th { width: 10em; }
+table.creditlist th + th { width: 5em; }
+table.creditlist th + th + th { width: 5em; }
+table.creditlist td + td { text-align: center; }
+table.creditlist td { padding: 0.2em 0; }
+table.creditlist a { text-decoration: none; }
+
+table.creditslist { vertical-align: top; width:25em; }
+
+table.playerlist th { border-bottom: 2px solid black; padding: 0 1.0em; }
+table.playerlist { border-collapse: collapse; }
+table.playerlist td + td { text-align: center; }
+table.playerlist td { padding: 0.2em 0;}
+
+table.detail_credits { border-collapse: collapse; width: 100%; }
+table.detail_credits th { border-bottom: 1px solid black; text-align: center; }
+table.detail_credits td { text-align: center; }
+table.detail_credits td + td { text-align: center; }
+table.detail_credits td + td + td { text-align: left; }
+table.detail_credits a { text-decoration: none; }
+
+table.attendeelist { border-collapse: collapse; }
+table.attendeelist th { border-bottom: 2px solid black; padding: 0 1.0em; }
+table.attendeelist td + td { text-align: center; }
+table.attendeelist a { text-decoration: none; }
+
+table.playerdetail td { vertical-align: top; }

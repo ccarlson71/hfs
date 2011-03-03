@@ -11,6 +11,8 @@ Hfs::Application.routes.draw do
 
   resources :player_classes
 
+  match 'players/:id/show_class_details/:player_class_id' => 'players#show_details', :as => :show_details
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
