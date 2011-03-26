@@ -27,3 +27,9 @@ table.attendeelist td + td { text-align: center; }
 table.attendeelist a { text-decoration: none; }
 
 table.playerdetail td { vertical-align: top; }
+
+table.classplayerlist { border-collapse: collapse; }
+table.classplayerlist th { border-bottom: 2px solid black; padding: 0 1.0em; }
+table.classplayerlist a { text-decoration: none; }
+table.classplayerlist td + td { text-align: center; }
+table.classplayerlist td + td + td { text-align: center; }

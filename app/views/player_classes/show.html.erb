@@ -1,9 +1,20 @@
-<% title "Player Class" %>
+<% title "#{@player_class.name} Overview" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @player_class.name %>
-</p>
+<% if @player_class.players.nil? %>
+	<h1>No Players</h1>
+<% else %>
+	<table class="classplayerlist">
+		<tr><th>Player</th><th>Credits</th><th>Level</th></tr>
+		<% for player in @player_class.players %>
+		<% credits = player.credits_for(@player_class.id) %>
+			<tr>
+				<td><%= link_to(player.name,player) %></td>
+				<td><%= credits %></td>
+				<td><%= credits.to_level %></td>
+			</tr>
+		<% end %>
+	</table>	
+<% end %>
 
 <p>
   <%= link_to "Edit", edit_player_class_path(@player_class) %> |
